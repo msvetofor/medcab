@@ -7,6 +7,7 @@
     @yield('css')
 </head>
 <body>
+    <script src="{{ asset('/js/jquery.js') }}"></script>
     @yield('sidebar')
     @yield('content')
 </body>

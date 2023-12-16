@@ -2,16 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'main'])->middleware('auth')->name('profile');
 
-Route::get('/', [App\Http\Controllers\AuthorizationController::class, 'authorization'])->name('authorization');
-Route::get('/reg', [App\Http\Controllers\RegistrationController::class, 'registration'])->name('registration');
+Route::get('/logout', [App\Http\Controllers\AuthorizationController::class, 'destroy'])->middleware('auth')->name('logout');
+Route::get('/', [App\Http\Controllers\AuthorizationController::class, 'authorization'])->middleware('guest')->name('authorization');
+Route::post('/', [App\Http\Controllers\AuthorizationController::class, 'store'])->middleware('guest');
+
+Route::get('/reg', [App\Http\Controllers\RegistrationController::class, 'registration'])->middleware('guest')->name('registration');
+Route::post('/reg', [App\Http\Controllers\RegistrationController::class, 'store'])->middleware('guest');

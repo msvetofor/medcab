@@ -8,29 +8,37 @@
 
 @section('content')
     <div class="form_container">
-        <form class="form">
+        <form class="form" action="{{ route('registration') }}" method="POST" autocomplete="off">
+            @csrf
             <div class="form_content">
                 <h2>Электронный кабинет</h2>
                 <div class="input_wrapper">
-                    <label for="login">Логин</label>
-                    <input type="text" name="login" id="login"/>
+                    <label for="name">ФИО</label>
+                    <input type="text" value="{{ old('name') }}" name="name" id="name"/>
+                </div>
+                <div class="input_wrapper">
+                    <label for="email">E-Mail</label>
+                    <input type="email" value="{{ old('email') }}" name="email" id="email"/>
+                </div>
+                <div class="input_wrapper">
+                    <label for="gender">Пол</label>
+                    <input type="text" value="{{ old('gender') }}" name="gender" id="gender"/>
+                </div>
+                <div class="input_wrapper">
+                    <label for="date_of_birth">Дата рождения</label>
+                    <input type="date" value="{{ old('date_of_birth') }}" name="date_of_birth" id="date_of_birth"/>
                 </div>
                 <div class="input_wrapper">
                     <label for="password">Пароль</label>
                     <input type="password" name="password" id="password"/>
                 </div>
                 <div class="input_wrapper">
-                    <label for="password_verify">Подтвердите пароль</label>
-                    <input type="password" name="password_verify" id="password_verify"/>
+                    <label for="password_confirmation">Подтвердите пароль</label>
+                    <input type="password" name="password_confirmation" id="password_confirmation"/>
                 </div>
-                <div class="input_wrapper">
-                    <label for="gender">Пол</label>
-                    <input type="text" name="gender" id="gender"/>
-                </div>
-                <div class="input_wrapper">
-                    <label for="date_of_birth">Дата рождения</label>
-                    <input type="date" name="date_of_birth" id="date_of_birth"/>
-                </div>
+                @foreach($errors->all() as $message)
+                    <li style="color: red;">{{ $message }}</li>
+                @endforeach
                 <button class="form_button">Регистрация</button>
                 <div class="form_bottom_text">Уже зарегистрированы? <a href="{{ route('authorization') }}">Войти</a></div>
             </div>
