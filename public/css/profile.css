@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #1D1D1D;
+    --color-gray: #707070;
+    --color-purple: #626DFF;
+    --color-shadow: rgba(29, 29, 29, 0.25)
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar_container {
+    position: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+.sidebar {
+    min-height: 800px;
+    padding: 10px;
+    border-radius: 30px;
+    background: var(--color-white);
+    box-shadow: 0px 0px 5px 0px var(--color-shadow);
+}
+.sidebar a {
+    text-decoration: none;
+}
+.sidebar_menu_button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.sidebar_menu_button_icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-white);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(29, 29, 29, 0.25);
+    transition: all .3s;
+}
+.sidebar_menu_button_icon path {
+    stroke: var(--color-black);
+    transition: all .3s;
+}
+.sidebar_menu_button_active .sidebar_menu_button_icon, .sidebar_menu_button:hover .sidebar_menu_button_icon {
+    background: var(--color-purple);
+}
+.sidebar_menu_button_active path, .sidebar_menu_button:hover path {
+    stroke: var(--color-white);
+}
+.sidebar_menu_button_active .hover_svg_fill path, .sidebar_menu_button:hover .hover_svg_fill path {
+    fill: var(--color-white)
+}
+.sidebar_menu_button_label {
+    max-width: 0;
+    display: none;
+    color: var(--color-black);
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    margin-inline: 32px;
+    transition: all .3s;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+.content_space {
+    width: 100%;
+    min-height: 800px;
+    border-radius: 30px;
+    background: var(--color-white);
+    box-shadow: 0px 0px 5px 0px var(--color-shadow);
+}
