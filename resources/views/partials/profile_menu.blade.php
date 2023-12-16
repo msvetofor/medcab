@@ -6,7 +6,7 @@
 
 @section('profile_content')
     <div class="profile_menu">
-        <a href="">
+        <a href="{{ route('certificates') }}">
             <div class="profile_menu_item">
                 <div class="profile_line">
                     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </a>
-        <a href="">
+        <a href="{{ route('recomendations') }}">
             <div class="profile_menu_item">
                 <div class="profile_line">
                     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none">
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </a>
-        <a href="">
+        <a href="{{ route('consultation') }}">
             <div class="profile_menu_item">
                 <div class="profile_line">
                     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none">
