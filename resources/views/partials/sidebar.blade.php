@@ -82,7 +82,6 @@
                     <div class="sidebar_menu_button_label">Консультация</div>
                 </div>
             </a>
-            <a href="{{route('logout')}}">Выйтии</a>
         </div>
     </div>
 </div>

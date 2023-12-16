@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     padding: 25px;
+    z-index: 999;
 }
 .sidebar {
     min-height: 800px;
@@ -125,13 +126,18 @@
 .user_data p {
     margin-bottom: 5px;
 }
-.profile_content {
+.profile_path, .profile_path a {
+    margin: 25px 0;
+    font-size: 16px;
+    color: var(--color-gray);
+}
+.profile_menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 25px;
     column-gap: 25px;
 }
-.profile_content a {
+.profile_menu a {
     text-decoration: none;
 }
 .profile_menu_item {
@@ -141,6 +147,7 @@
     box-shadow: 0px 0px 3px 0px var(--color-shadow);
     padding: 30px 40px;
     cursor: pointer;
+    transition: all .3s;
 }
 .profile_line {
     display: flex;
@@ -155,6 +162,68 @@
     text-transform: uppercase;
     transition: color .3s;
 }
+.profile_menu_item:hover {
+    box-shadow: 0px 0px 5px var(--color-purple);
+}
 .profile_menu_item:hover .profile_menu_item_label {
     color: var(--color-purple)
 }
+.form_content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+.input_wrapper {
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+}
+.input_wrapper label {
+    position: absolute;
+    top: -7px;
+    left: 20px;
+    padding: 0 5px;
+    color: var(--color-gray);
+    font-size: 14px;
+    font-weight: bold;
+    background: var(--color-white);
+}
+.input_wrapper input {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: 1px solid var(--color-gray);
+}
+.buttons_line {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.logout {
+    font-size: 18px;
+    color: red;
+    text-decoration: underline;
+}
+.form_button {
+    border: none;
+    background: var(--color-purple);
+    box-shadow: 0px 4px 4px var(--color-shadow);
+    border-radius: 30px;
+    color: var(--color-white);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 5px 30px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.form_button:hover {
+    background: var(--color-white);
+    box-shadow: 0px 0px 4px var(--color-purple);
+    color: var(--color-black);
+}
+

@@ -10,4 +10,5 @@ Route::get('/reg', [App\Http\Controllers\RegistrationController::class, 'registr
 Route::post('/reg', [App\Http\Controllers\RegistrationController::class, 'store'])->middleware('guest');
 
 Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'main'])->middleware('auth')->name('profile');
-Route::get('/profile/settings', [\App\Http\Controllers\UserSettingsController::class, 'getSettings'])->middleware('auth')->name('settings');
+Route::get('/profile/settings', [\App\Http\Controllers\ProfileController::class, 'getSettings'])->middleware('auth')->name('settings');
+Route::post('/profile/settings', [\App\Http\Controllers\ProfileController::class, 'updateSettings'])->middleware('auth');
