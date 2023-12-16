@@ -26,7 +26,7 @@
                     <div class="sidebar_menu_button_label">Справки</div>
                 </div>
             </a>
-            <a href="">
+            <a href="{{ route('injections') }}">
                 <div class="sidebar_menu_button" id="injections">
                     <div class="sidebar_menu_button_icon hover_svg_fill">
                         <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
@@ -48,7 +48,7 @@
                     <div class="sidebar_menu_button_label">Прививки</div>
                 </div>
             </a>
-            <a href="">
+            <a href="{{ route('medical_book') }}">
                 <div class="sidebar_menu_button" id="medical_book">
                     <div class="sidebar_menu_button_icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
@@ -58,7 +58,7 @@
                     <div class="sidebar_menu_button_label">Мед. книжка</div>
                 </div>
             </a>
-            <a href="">
+            <a href="{{ route('diseases') }}">
                 <div class="sidebar_menu_button">
                     <div class="sidebar_menu_button_icon" id="diseases">
                         <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
@@ -71,7 +71,7 @@
                     <div class="sidebar_menu_button_label">История болезней</div>
                 </div>
             </a>
-            <a href="">
+            <a href="{{ route('consultation') }}">
                 <div class="sidebar_menu_button">
                     <div class="sidebar_menu_button_icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
