@@ -16,6 +16,9 @@ Route::get('/app', [App\Http\Controllers\AppointmentSpecializationController::cl
 Route::get('/appointmentdoctor/{userSpecialization}', [ App\Http\Controllers\AppointmentDoctorController::class, 'appointmentdoctor'])->name('appointmentdoctor');
 
 Route::get('/certificates', [\App\Http\Controllers\CertificateController::class, 'certificates'])->middleware('auth')->name('certificates');
+Route::get('/certificates/create', [\App\Http\Controllers\CertificateController::class, 'get_form'])->middleware('auth')->name('create_certificate');
+Route::post('/certificates/create', [\App\Http\Controllers\CertificateController::class, 'create'])->middleware('auth');
+
 Route::get('/injections', [\App\Http\Controllers\InjectionController::class, 'injections'])->middleware('auth')->name('injections');
 Route::get('/records', [\App\Http\Controllers\RecordController::class, 'records'])->middleware('auth')->name('records');
 Route::get('/diseases', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('diseases');

@@ -12,6 +12,6 @@ class Certificate extends Model
         'doctor',
         'address',
         'description',
-        'date',
+        'started_at',
     ];
 }
