@@ -42,6 +42,6 @@ class CertificateController extends Controller
             'description' => $request->description,
         ]);
 
-        return redirect()->route('certificates')->with('message', 'Справка успешно добавлена и ожидает подтверждения от врача!');
+        return redirect()->route('certificates')->with('message', 'Справка успешно добавлена и ожидает подтверждения врача!');
     }
 }

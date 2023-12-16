@@ -22,7 +22,7 @@ class Injection extends Model implements HasMedia
         'doctor',
         'address',
         'description',
-        'date',
+        'started_at',
     ];
 
     protected $casts = [
