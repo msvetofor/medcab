@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +9,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-@font-face {
-    font-family: 'Roboto';
-    src: url('font/Roboto.ttf');
 }
 .form{
     margin-top: 50px;
@@ -55,7 +52,7 @@ body{
     color: #1D1D1D;
 }
 .form_image{
-    background-image: url("form_image.png");
+    background-image: url("/images/form_image.png");
     background-size: cover;
     width: 100%;
     border-radius: 65px 0px 0px 179px;
