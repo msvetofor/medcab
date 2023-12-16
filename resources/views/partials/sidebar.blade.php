@@ -48,7 +48,7 @@
                     <div class="sidebar_menu_button_label">Прививки</div>
                 </div>
             </a>
-            <a href="{{ route('medical_book') }}">
+            <a href="{{ route('records') }}">
                 <div class="sidebar_menu_button" id="medical_book">
                     <div class="sidebar_menu_button_icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
