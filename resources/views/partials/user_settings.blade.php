@@ -1,4 +1,4 @@
-@extends('profile')
+@extends('layout.profile')
 
 @section('path')
     <div class="profile_path"><a href="{{ route('profile') }}">Профиль</a> / <a href="{{ route('settings') }}">Настройки</a> /</div>

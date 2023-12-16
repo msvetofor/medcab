@@ -13,7 +13,7 @@
             </a>
         </div>
         <div class="menu">
-            <a href="">
+            <a href="{{ route('certificates') }}">
                 <div class="sidebar_menu_button" id="certificates">
                     <div class="sidebar_menu_button_icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
