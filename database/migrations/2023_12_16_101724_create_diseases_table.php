@@ -12,10 +12,10 @@ return new class extends Migration
         Schema::create('diseases', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('doctor')->nullable();
-            $table->text('description')->nullable();
-            $table->date('started_at')->nullable();
-            $table->date('ended_at')->nullable();
+            $table->string('doctor');
+            $table->text('description');
+            $table->date('started_at');
+            $table->date('ended_at');
             $table->foreignIdFor(User::class);
             $table->timestamps();
         });

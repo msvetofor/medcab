@@ -12,11 +12,11 @@ return new class extends Migration
         Schema::create('records', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('doctor')->nullable();
-            $table->string('address')->nullable();
-            $table->text('description')->nullable();
-            $table->text('treatment')->nullable();
-            $table->date('started_at')->nullable();
+            $table->string('doctor');
+            $table->string('address');
+            $table->text('description');
+            $table->text('treatment');
+            $table->date('started_at');
             $table->foreignIdFor(User::class);
             $table->timestamps();
         });

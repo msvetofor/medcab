@@ -28,5 +28,8 @@ Route::get('/records/create', [\App\Http\Controllers\RecordController::class, 'g
 Route::post('/records/create', [\App\Http\Controllers\RecordController::class, 'create'])->middleware('auth');
 
 Route::get('/diseases', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('diseases');
+Route::get('/diseases/create', [\App\Http\Controllers\DiseaseController::class, 'get_form'])->middleware('auth')->name('create_disease');
+Route::post('/diseases/create', [\App\Http\Controllers\DiseaseController::class, 'create'])->middleware('auth');
+
 Route::get('/consultation', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('consultation');
 Route::get('/recommendations', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('recommendations');
