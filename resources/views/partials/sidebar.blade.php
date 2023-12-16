@@ -1,7 +1,7 @@
 <div class="sidebar_container">
     <div class="sidebar">
         <div class="profile">
-            <a href="">
+            <a href="{{ route('profile') }}">
                 <div class="sidebar_menu_button" id="profile">
                     <div class="sidebar_menu_button_icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="33" height="41" viewBox="0 0 33 41" fill="none">
@@ -82,6 +82,7 @@
                     <div class="sidebar_menu_button_label">Консультация</div>
                 </div>
             </a>
+            <a href="{{route('logout')}}">Выйтии</a>
         </div>
     </div>
 </div>

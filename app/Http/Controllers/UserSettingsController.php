@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class ProfileController extends Controller
+class UserSettingsController extends Controller
 {
-    public function main() {
+    public function getSettings()
+    {
         $user = auth()->user();
 
-        return view('profile', [
+        return view('partials.user_settings', [
             'user' => $user,
         ]);
     }
