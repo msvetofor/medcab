@@ -17,6 +17,8 @@ return new class extends Migration
             $table->date('date_of_birth');
             $table->string('password');
             $table->rememberToken();
+            $table->string('role')->nullable();
+            $table->string('specialization')->nullable();
             $table->timestamps();
         });
     }

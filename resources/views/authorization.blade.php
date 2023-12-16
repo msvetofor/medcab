@@ -30,7 +30,7 @@
                 <div class="form_bottom_text">Нет аккаунта? <a href="{{ route('registration') }}">Зарегистрироваться</a></div>
             </div>
             <div class="form_image">
-                <img src="{{ asset('/images/form_img.jpg') }}" alt="Удобный интерыейс">
+                <img src="{{ asset('/images/form_img.jpg') }}" alt="Удобный интерфейс">
             </div>
         </form>
     </div>
