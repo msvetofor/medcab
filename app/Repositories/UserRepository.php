@@ -11,4 +11,12 @@ class UserRepository
     {
         return Auth::user()->certificates()->get();
     }
+    public function getInjections(): Collection
+    {
+        return Auth::user()->injections()->get();
+    }
+    public function getRecords(): Collection
+    {
+        return Auth::user()->records()->get();
+    }
 }

@@ -2,20 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\RecordRepository;
+use App\Repositories\UserRepository;
 
 class RecordController extends Controller
 {
 
-    public function __construct(protected RecordRepository $recordRepository)
+    public function __construct(protected UserRepository $userRepository)
     {
     }
 
     public function records()
     {
-        $records = $this->recordRepository->getRecords();
+        $records = $this->userRepository->getRecords();
 
-        return view('medical_book', [
+        return view('records', [
             'records' => $records,
         ]);
     }

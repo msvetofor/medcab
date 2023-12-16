@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\InjectionRepository;
+use App\Repositories\UserRepository;
 
 class InjectionController extends Controller
 {
 
-    public function __construct(protected InjectionRepository $injectionRepository)
+    public function __construct(protected UserRepository $userRepository)
     {
     }
 
     public function injections()
     {
-        $injections = $this->injectionRepository->getInjections();
+        $injections = $this->userRepository->getInjections();
 
         return view('injections', [
             'injections' => $injections,
