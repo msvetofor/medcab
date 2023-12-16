@@ -15,11 +15,11 @@
         <div class="container">
             <div class="content_space">
                 <div class="header">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
-                        <path d="M5.75 19.1667C5.75 11.9385 5.75 8.32437 7.99551 6.07885C10.241 3.83334 13.8551 3.83334 21.0833 3.83334H24.9167C32.1448 3.83334 35.7591 3.83334 38.0044 6.07885C40.25 8.32437 40.25 11.9385 40.25 19.1667V26.8333C40.25 34.0615 40.25 37.6757 38.0044 39.9211C35.7591 42.1667 32.1448 42.1667 24.9167 42.1667H21.0833C13.8551 42.1667 10.241 42.1667 7.99551 39.9211C5.75 37.6757 5.75 34.0615 5.75 26.8333V19.1667Z" stroke="#1D1D1D" stroke-width="5"/>
-                        <path d="M23.0001 11.5V15.3333M23.0001 15.3333V19.1667M23.0001 15.3333H19.1667M23.0001 15.3333H26.8335" stroke="#1D1D1D" stroke-opacity="0.5" stroke-width="5" stroke-linecap="round"/>
-                        <path d="M15.3333 26.8333H30.6666" stroke="#1D1D1D" stroke-width="5" stroke-linecap="round"/>
-                        <path d="M17.25 34.5H28.75" stroke="#1D1D1D" stroke-width="5" stroke-linecap="round"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+                        <path d="M41.125 13.7083V33.2917C41.125 39.1667 38.1875 43.0833 31.3333 43.0833H15.6667C8.8125 43.0833 5.875 39.1667 5.875 33.2917V13.7083C5.875 7.83332 8.8125 3.91666 15.6667 3.91666H31.3333C38.1875 3.91666 41.125 7.83332 41.125 13.7083Z" stroke="#1D1D1D" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M30.3542 3.91666V19.3091C30.3542 20.1708 29.3358 20.6017 28.7092 20.0337L24.1658 15.843C23.7937 15.4905 23.2062 15.4905 22.8342 15.843L18.2909 20.0337C17.6642 20.6017 16.6458 20.1708 16.6458 19.3091V3.91666H30.3542Z" stroke="#1D1D1D" stroke-opacity="0.5" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25.9479 27.4167H34.2708" stroke="#1D1D1D" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.625 35.25H34.2708" stroke="#1D1D1D" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <div class="header_title">История болезней <span>(Найдено {{ $diseases->count() }})</span></div>
                 </div>
@@ -36,7 +36,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        Добавить болезнь
+                        Добавить запись
                     </a>
                     <div class="search_field">
                         <label for="search" style="margin-right: 15px">
