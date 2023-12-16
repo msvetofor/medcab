@@ -6,7 +6,8 @@
     <title>@yield('title')</title>
     @yield('css')
 </head>
-<body class="antialiased">
+<body>
+    @yield('sidebar')
     @yield('content')
 </body>
 </html>
