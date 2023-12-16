@@ -11,6 +11,16 @@
 @endsection
 
 @section('content')
+    @if($message = Session::get('message'))
+        <div class="fade_out">
+            {{ $message }}
+            <script>
+                setTimeout(function () {
+                    $('.fade_out').fadeOut();
+                }, 2000);
+            </script>
+        </div>
+    @endif
     <div class="wrapper">
         <div class="container">
             <div class="content_space">
@@ -21,7 +31,7 @@
                     <div class="header_title">Мед. книжка <span>(Найдено записей {{ $records->count() }})</span></div>
                 </div>
                 <div class="buttons_line">
-                    <a href="" class="create_button">
+                    <a href="{{ route('create_record') }}" class="create_button">
                         <svg style="margin-right: 15px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                             <g clip-path="url(#clip0_5_207)">
                                 <path d="M16.0001 29.3333C23.3639 29.3333 29.3334 23.3638 29.3334 16C29.3334 8.6362 23.3639 2.66667 16.0001 2.66667C8.63628 2.66667 2.66675 8.6362 2.66675 16C2.66675 23.3638 8.63628 29.3333 16.0001 29.3333Z" stroke="#626DFF" stroke-width="5"/>
