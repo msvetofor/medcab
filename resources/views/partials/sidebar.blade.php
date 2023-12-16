@@ -59,8 +59,8 @@
                 </div>
             </a>
             <a href="{{ route('diseases') }}">
-                <div class="sidebar_menu_button">
-                    <div class="sidebar_menu_button_icon" id="diseases">
+                <div class="sidebar_menu_button" id="diseases">
+                    <div class="sidebar_menu_button_icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
                             <path d="M41.125 13.7083V33.2917C41.125 39.1667 38.1875 43.0833 31.3333 43.0833H15.6667C8.8125 43.0833 5.875 39.1667 5.875 33.2917V13.7083C5.875 7.83332 8.8125 3.91666 15.6667 3.91666H31.3333C38.1875 3.91666 41.125 7.83332 41.125 13.7083Z" stroke="#1D1D1D" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M30.3542 3.91666V19.3091C30.3542 20.1708 29.3358 20.6017 28.7092 20.0337L24.1658 15.843C23.7937 15.4905 23.2062 15.4905 22.8342 15.843L18.2909 20.0337C17.6642 20.6017 16.6458 20.1708 16.6458 19.3091V3.91666H30.3542Z" stroke="#1D1D1D" stroke-opacity="0.5" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
