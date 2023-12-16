@@ -20,4 +20,4 @@ Route::get('/injections', [\App\Http\Controllers\InjectionController::class, 'in
 Route::get('/records', [\App\Http\Controllers\RecordController::class, 'records'])->middleware('auth')->name('records');
 Route::get('/diseases', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('diseases');
 Route::get('/consultation', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('consultation');
-Route::get('/recomendations', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('recomendations');
+Route::get('/recommendations', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('recommendations');
