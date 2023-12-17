@@ -21,6 +21,10 @@ Route::get('/doctor/{DoctorId}', [ App\Http\Controllers\DoctorController::class,
 Route::get('/certificates', [\App\Http\Controllers\CertificateController::class, 'certificates'])->middleware('auth')->name('certificates');
 Route::get('/certificates/create', [\App\Http\Controllers\CertificateController::class, 'get_form'])->middleware('auth')->name('create_certificate');
 Route::post('/certificates/create', [\App\Http\Controllers\CertificateController::class, 'create'])->middleware('auth');
+Route::get('/certificates/update/{id}', [\App\Http\Controllers\CertificateController::class, 'get_update_form'])->middleware('auth')->name('update_certificate');
+Route::post('/certificates/update/{id}', [\App\Http\Controllers\CertificateController::class, 'update'])->middleware('auth');
+Route::get('/certificates/delete/{id}', [\App\Http\Controllers\CertificateController::class, 'delete'])->middleware('auth')->name('delete_certificate');
+Route::get('/certificates/undelete/{id}', [\App\Http\Controllers\CertificateController::class, 'undelete'])->middleware('auth')->name('undelete_certificate');
 
 Route::get('/injections', [\App\Http\Controllers\InjectionController::class, 'injections'])->middleware('auth')->name('injections');
 Route::get('/injections/create', [\App\Http\Controllers\InjectionController::class, 'get_form'])->middleware('auth')->name('create_injection');

@@ -13,5 +13,7 @@ class Certificate extends Model
         'address',
         'description',
         'started_at',
+        'archived',
+        'confirmed',
     ];
 }
