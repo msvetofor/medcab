@@ -99,11 +99,13 @@
                                     <td> {{ $certificate->doctor }}</td>
                                     <td>{{ $certificate->started_at }}</td>
                                     <td style="display: flex">
-                                        <a href="{{ route('update_certificate', $certificate->id) }}" class="edit">Изменить</a>
-                                        @if($certificate->archived)
-                                            <a href="{{ route('undelete_certificate', $certificate->id) }}" class="delete">Восстановить</a>
-                                        @else
-                                            <a href="{{ route('delete_certificate', $certificate->id) }}" class="delete">Удалить</a>
+                                        @if(!$certificate->confirmed)
+                                            <a href="{{ route('update_certificate', $certificate->id) }}" class="edit">Изменить</a>
+                                            @if($certificate->archived)
+                                                <a href="{{ route('undelete_certificate', $certificate->id) }}" class="delete">Восстановить</a>
+                                            @else
+                                                <a href="{{ route('delete_certificate', $certificate->id) }}" class="delete">Удалить</a>
+                                            @endif
                                         @endif
                                     </td>
                                 </tr>
