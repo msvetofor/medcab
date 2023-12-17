@@ -19,6 +19,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->string('role')->nullable();
             $table->string('specialization')->nullable();
+            $table->text('achive')->nullable();
             $table->timestamps();
         });
     }

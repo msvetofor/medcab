@@ -71,8 +71,8 @@
                     <div class="sidebar_menu_button_label">История болезней</div>
                 </div>
             </a>
-            <a href="{{ route('consultation') }}">
-                <div class="sidebar_menu_button">
+            <a href="{{ route('consultations') }}">
+                <div class="sidebar_menu_button" id="consultations">
                     <div class="sidebar_menu_button_icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
                             <path d="M23.5 43.0833C34.3155 43.0833 43.0833 34.3155 43.0833 23.5C43.0833 12.6844 34.3155 3.91666 23.5 3.91666C12.6844 3.91666 3.91666 12.6844 3.91666 23.5C3.91666 26.6327 4.65225 29.5935 5.9601 32.2195C6.30766 32.9172 6.42334 33.7148 6.22185 34.4678L5.05545 38.8273C4.5491 40.7196 6.28038 42.4508 8.1728 41.9445L12.5321 40.7782C13.2852 40.5767 14.0828 40.6924 14.7806 41.0398C17.4064 42.3478 20.3672 43.0833 23.5 43.0833Z" stroke="#1D1D1D" stroke-width="5"/>

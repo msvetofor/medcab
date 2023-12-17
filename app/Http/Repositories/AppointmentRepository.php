@@ -15,4 +15,7 @@ class AppointmentRepository
     public function getDoctors(): Collection{
         return User::query()->where('role', '=', 'Врач')->orderBy('created_at', 'DESC')->get();
     }
+    public function getDoctor($DoctorId): Collection{
+        return User::query()->where('id', '=', $DoctorId)->get();
+    }
 }

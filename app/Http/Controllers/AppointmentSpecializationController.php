@@ -10,7 +10,7 @@ class AppointmentSpecializationController extends Controller
     public function __construct(protected AppointmentRepository $specializationRepository)
     {
     }
-    public function appointmentspecialization()
+    public function appointmspecialist()
     {
         $specializations = $this->specializationRepository->getSpecialization();
         return view('appointmentspecialization', [
