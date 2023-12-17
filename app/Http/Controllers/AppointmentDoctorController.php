@@ -13,7 +13,7 @@ class AppointmentDoctorController extends Controller
     public function appointmentdoctor($userSpecialization)
     {
         $specializations = $this->appointmentRepository->getSpecialization();
-        $doctors = $this->appointmentRepository->getDoctors();
+        $doctors = $this->appointmentRepository->getDoctors($userSpecialization);
         return view('appointmentdoctor', [
             'specializations' => $specializations,
             'doctors' => $doctors,
