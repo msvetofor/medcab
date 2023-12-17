@@ -23,11 +23,7 @@ class Record extends Model implements HasMedia
         'address',
         'description',
         'treatment',
-        'date',
-    ];
-
-    protected $casts = [
-        'unit' => UnitEnum::class,
+        'started_at',
     ];
 
     public function getRecordImage(): ?Media

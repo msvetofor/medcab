@@ -19,9 +19,21 @@ Route::get('/consultations', [\App\Http\Controllers\ConsultationController::clas
 Route::get('/doctor/{DoctorId}', [ App\Http\Controllers\DoctorController::class, 'doctor'])->name('doctor');
 
 Route::get('/certificates', [\App\Http\Controllers\CertificateController::class, 'certificates'])->middleware('auth')->name('certificates');
+Route::get('/certificates/create', [\App\Http\Controllers\CertificateController::class, 'get_form'])->middleware('auth')->name('create_certificate');
+Route::post('/certificates/create', [\App\Http\Controllers\CertificateController::class, 'create'])->middleware('auth');
+
 Route::get('/injections', [\App\Http\Controllers\InjectionController::class, 'injections'])->middleware('auth')->name('injections');
+Route::get('/injections/create', [\App\Http\Controllers\InjectionController::class, 'get_form'])->middleware('auth')->name('create_injection');
+Route::post('/injections/create', [\App\Http\Controllers\InjectionController::class, 'create'])->middleware('auth');
+
 Route::get('/records', [\App\Http\Controllers\RecordController::class, 'records'])->middleware('auth')->name('records');
+Route::get('/records/create', [\App\Http\Controllers\RecordController::class, 'get_form'])->middleware('auth')->name('create_record');
+Route::post('/records/create', [\App\Http\Controllers\RecordController::class, 'create'])->middleware('auth');
+
 Route::get('/diseases', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('diseases');
+Route::get('/diseases/create', [\App\Http\Controllers\DiseaseController::class, 'get_form'])->middleware('auth')->name('create_disease');
+Route::post('/diseases/create', [\App\Http\Controllers\DiseaseController::class, 'create'])->middleware('auth');
+
 Route::get('/consultation', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('consultation');
 Route::get('/recommendations', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('recommendations');
 
