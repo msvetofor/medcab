@@ -1,0 +1,181 @@
+*, *:before, *:after {
+	box-sizing: border-box; 
+	margin: 0px;
+	padding: 0px;
+}
+
+body { /* !!!!!!!!!!! это нужно убрать */
+	padding: 25px;
+}
+
+/* Appointment -- begin */
+.appointment {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Roboto'; /* !!!!!!!!!!! это нужно заменить на Fira Sans */
+}
+
+.appointment-title {
+	display: flex;
+	margin-right: 100px;
+}
+
+.appointment-title p {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #58576A;
+	font-size: 40px;
+	position: absolute;
+	transform: translate(350px, 70px);
+}
+
+.appointment .form-item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+#specialist label {
+	align-self: flex-start;
+	padding: 2px 10px;
+	font-size: 14px;
+	position: absolute;
+	background-color: white;
+	font-weight: bold;
+	color: #58576A;
+	transform: translate(40px, -10px);
+}
+
+#problem-description label {
+	align-self: flex-start;
+	padding: 2px 10px;
+	font-size: 14px;
+	position: absolute;
+	background-color: white;
+	font-weight: bold;
+	color: #58576A;
+	transform: translate(40px, -10px);
+}
+
+#specialist input {
+	align-self: flex-start;
+	padding: 15px;
+	border: 3px solid #58576A;
+	width: 440px;
+	border-radius: 25px;
+	outline: none;
+	height: 60px;
+	margin-bottom: 30px;
+}
+
+#problem-description textarea {
+	align-self: flex-start;
+	padding: 15px;
+	border: 3px solid #58576A;
+	width: 440px;
+	border-radius: 25px;
+	outline: none;
+	height: 144px;
+	margin-bottom: 30px;
+	resize: none;
+}
+
+#communication-method {
+	width: 100%;
+	display: flex;
+}
+
+#communication-method p {
+	font-size: 25px;
+	background-color: white;
+	font-weight: bold;
+	color: #58576A;
+	margin-bottom: 15px;
+}
+
+.radio-buttons-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.radio-buttons-container input[type="radio"] {
+	display: none;
+}
+
+.c-m-radio-button {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid #858AD4;
+	height: 60px;
+	width: 120px;
+	border-radius: 25px;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+.c-m-radio-button svg path {
+	stroke: #858AD4;	
+}
+
+.c-m-radio-button span {
+	font-size: 18px;
+	font-weight: bold;
+	color: #858AD4;
+	margin-left: 10px;
+}
+
+#audio-method:checked ~ #c-m-exception-radio-button-1 svg path {
+	stroke: white;
+	fill: white;
+}
+
+#audio-method:checked ~ #c-m-exception-radio-button-1 {
+	background-color: #858AD4;
+}
+
+#audio-method:checked ~ #c-m-exception-radio-button-1 span {
+	color: white;
+}
+
+#video-method:checked ~ #c-m-exception-radio-button-2 svg path {
+	stroke: white;
+	fill: white;
+}
+
+#video-method:checked ~ #c-m-exception-radio-button-2 {
+	background-color: #858AD4;
+}
+
+#video-method:checked ~ #c-m-exception-radio-button-2 span {
+	color: white;
+}
+
+#chat-method:checked ~ #c-m-exception-radio-button-3 svg path {
+	stroke: white;
+}
+
+#chat-method:checked ~ #c-m-exception-radio-button-3 {
+	background-color: #858AD4;
+}
+
+#chat-method:checked ~ #c-m-exception-radio-button-3 span {
+	color: white;
+}
+
+.form-send-button {
+	font-weight: bold;
+	background-color: #858AD4;
+	border: none;
+	color: white;
+	width: 100%;
+	padding: 23px 10px;
+	font-size: 24px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+/* Appointment -- end */
