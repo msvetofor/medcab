@@ -9,6 +9,7 @@
 </head>
 <body>
     <script src="{{ asset('/js/jquery.js') }}"></script>
+    @yield('header')
     @yield('sidebar')
     @yield('content')
 </body>
