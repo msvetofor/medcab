@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="{{ asset('/css/profile.css') }}">
 @endsection
 
+@section('header')
+    @include('partials.header')
+@endsection
+
 @section('sidebar')
     @include('partials.sidebar')
 @endsection

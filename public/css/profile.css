@@ -21,7 +21,7 @@ h2 {
 }
 .sidebar_container {
     position: fixed;
-    min-height: 100vh;
+    min-height: 92vh;
     display: flex;
     align-items: center;
     padding: 25px;
@@ -83,7 +83,7 @@ h2 {
 
 .wrapper {
     width: 100%;
-    min-height: 100vh;
+    min-height: 92vh;
     align-items: center;
     justify-content: center;
     display: flex;
