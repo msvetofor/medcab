@@ -103,7 +103,19 @@ header {
 	stroke: #858AD4;
 }
 
-#nav-item-exception.active svg path {
+#nav-item-exception1 svg path {
+	fill: #fff;
+}
+
+#nav-item-exception2 svg path {
+	fill: #fff;
+}
+
+#nav-item-exception1.active svg path {
+	fill: #858AD4;
+}
+
+#nav-item-exception2.active svg path {
 	fill: #858AD4;
 }
 /* Header -- end */
