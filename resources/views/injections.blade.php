@@ -46,8 +46,8 @@
                     <a href="{{ route('create_injection') }}" class="create_button">
                         <svg style="margin-right: 15px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                             <g clip-path="url(#clip0_5_207)">
-                                <path d="M16.0001 29.3333C23.3639 29.3333 29.3334 23.3638 29.3334 16C29.3334 8.6362 23.3639 2.66667 16.0001 2.66667C8.63628 2.66667 2.66675 8.6362 2.66675 16C2.66675 23.3638 8.63628 29.3333 16.0001 29.3333Z" stroke="#626DFF" stroke-width="5"/>
-                                <path d="M20 16H16M16 16H12M16 16V12M16 16V20" stroke="#626DFF" stroke-width="5" stroke-linecap="round"/>
+                                <path d="M16.0001 29.3333C23.3639 29.3333 29.3334 23.3638 29.3334 16C29.3334 8.6362 23.3639 2.66667 16.0001 2.66667C8.63628 2.66667 2.66675 8.6362 2.66675 16C2.66675 23.3638 8.63628 29.3333 16.0001 29.3333Z" stroke="#858AD4" stroke-width="5"/>
+                                <path d="M20 16H16M16 16H12M16 16V12M16 16V20" stroke="#858AD4" stroke-width="5" stroke-linecap="round"/>
                             </g>
                             <defs>
                                 <clipPath id="clip0_5_207">
