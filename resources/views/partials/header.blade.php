@@ -44,8 +44,12 @@
         </div>
     </nav>
     <div class="header-auth">
-        <a href="{{ route('authorization') }}">Авторизоваться</a>
-        <img src="{{ asset('/images/header/auth-enter-icon.png') }}">
+        @if(Auth::check())
+            <a>{{ Auth::user()->name }}</a>
+        @else
+            <a href="{{ route('authorization') }}">Авторизоваться</a>
+        @endif
+        <a href="{{ route('logout') }}"><img src="{{ asset('/images/header/auth-enter-icon.png') }}"></a>
         <img style="display: none;" src="img/auth-quit-icon.png">
     </div>
 </header>
