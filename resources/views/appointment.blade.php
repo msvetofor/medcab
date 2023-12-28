@@ -3,10 +3,12 @@
 @section('title', 'Запись')
 
 @section('css')
+
     <link rel="stylesheet" href="{{ asset('/css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/appointment.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/style_base.css') }}">
+
 @endsection
 
 @section('header')
@@ -14,13 +16,48 @@
 @endsection
 
 @section('content')
+    @if($message = Session::get('message'))
+        <style>
+            .appointment{
+                transition: 3s;
+            }
+            .fade_out{
+                font-size: 24px;
+                color: #858AD4;
+                z-index: 1000;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                transition: 3s;
+                height: 5px;
+            }
+            /*display: flex;*/
+            /*justify-content: center;*/
+        </style>
+        <div class="fade_out">
+            {{ $message }}
+            <script>
+                setTimeout(function () {
+                    $('.fade_out').css({
+                        'font-size' : '10px',
+                        'height' : '0px',
+                        'padding': '0px',
+                        'opacity': '0',
+                    });
+                }, 2000);
+            </script>
+        </div>
+    @endif
     <section class="appointment">
             <div class="form-container">
                 <div class="appointment-title">
                     <img src="{{ asset('/images/appointment/appointment-doctor-image.png') }}">
                     <p>Запись на <br>онлайн<br>консультацию</p>
                 </div>
-                <form>
+                <form action="{{ route('appointment_create') }}" method="POST" autocomplete="off">
+                    @csrf
+                    <input style="display:none" type="text" id="field-specialist" name="user_id">
                     <div id="specialist" class="form-item">
                         <label for="field-specialist">Специалист</label>
                         <input type="text" id="field-specialist" name="specialist">
@@ -55,7 +92,7 @@
                             </label>
                         </div>
                     </div>
-                    <button class="form-send-button">Записаться</button>
+                    <button type="submit" class="form-send-button">Записаться</button>
                 </form>
             </div>
         <div class="page_container contacts">
