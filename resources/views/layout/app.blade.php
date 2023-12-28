@@ -14,4 +14,21 @@
     @yield('sidebar')
     @yield('content')
 </body>
+<style>
+    .xmas-magic-rightmost {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        transform: translate(200px, 100px);
+        width: 400px;
+    }
+
+    .xmas-magic-leftmost {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        transform: translate(-200px, 100px);
+        width: 400px;
+    }
+</style>
 </html>

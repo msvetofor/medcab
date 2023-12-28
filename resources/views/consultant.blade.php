@@ -61,9 +61,9 @@
                 </form>
             </div>
         </section>
-        <img class="xmas-magic-rightmost" src="{{ asset('/images/tree.png') }}">
-        <img class="xmas-magic-leftmost" src="{{ asset('/images/tree.png') }}">
     </div>
+    <img class="xmas-magic-rightmost" src="{{ asset('/images/tree.png') }}">
+    <img class="xmas-magic-leftmost" src="{{ asset('/images/tree.png') }}">
 
     <script>
         active = elements = document.getElementsByClassName('nav-item');
