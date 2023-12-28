@@ -1,6 +1,10 @@
+@section('css')
+    <link rel="stylesheet" href="{{ asset('/css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/style_base.css') }}">
+@endsection
 <header>
     <div class="header-logo">
-        <img src="{{ asset('/images/logoh.png') }}">
+        <img src="{{ asset('/images/header/logo.png') }}" >
         <p>МЕДКАБ</p>
     </div>
     <nav class="header-nav">
@@ -9,7 +13,7 @@
                 <path d="M21.3722 8.53878C22.1332 9.24548 22.5138 9.59882 22.7152 10.0608C22.9167 10.5228 22.9167 11.0421 22.9167 12.0806V19.6396C22.9167 21.9181 22.9167 23.0573 22.2088 23.7651C21.501 24.473 20.3618 24.473 18.0833 24.473H16.875H12.0417H10.8333C8.55488 24.473 7.41565 24.473 6.70783 23.7651C6 23.0573 6 21.9181 6 19.6396V12.0806C6 11.0421 6 10.5228 6.20145 10.0608C6.40292 9.59882 6.78344 9.24548 7.54449 8.53878L10.2292 6.04587L11.1695 5.17272C12.7293 3.72424 13.5093 3 14.4583 3C15.4074 3 16.1873 3.72424 17.7472 5.17272L18.6875 6.04587L21.3722 8.53878Z" stroke="#858AD4" stroke-width="3" stroke-linejoin="round"/>
                 <path d="M12.0416 24.473V19.6396C12.0416 18.3049 13.1236 17.223 14.4583 17.223C15.793 17.223 16.875 18.3049 16.875 19.6396V24.473" stroke="#858AD4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <a>Главная</a>
+            <a href="{{ route('main') }}">Главная</a>
         </div>
         <div class="nav-item">
             <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,130 +23,29 @@
                 <path d="M9 20H10.8125" stroke="white" stroke-width="3" stroke-linecap="round"/>
                 <path d="M23.9593 3.8323C22.5438 2.41666 20.2652 2.41666 15.7083 2.41666H13.2917C8.73475 2.41666 6.45631 2.41666 5.04065 3.8323C3.625 5.24796 3.625 7.52641 3.625 12.0833V16.9167C3.625 21.4735 3.625 23.7521 5.04065 25.1676C6.45631 26.5833 8.73475 26.5833 13.2917 26.5833H15.7083C20.2652 26.5833 22.5438 26.5833 23.9593 25.1676C25.0989 24.0281 25.3211 22.3295 25.3645 19.3333" stroke="white" stroke-width="3" stroke-linecap="round"/>
             </svg>
-            <a>Записаться</a>
+            <a href="{{ route('appointment') }}">Записаться</a>
         </div>
-        <div class="nav-item active" id="nav-item-exception">
+        <div class="nav-item" id="nav-item-exception1">
             <svg width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.5 13.5C17.2283 13.5 20.25 10.4783 20.25 6.75C20.25 3.02168 17.2283 0 13.5 0C9.77168 0 6.75 3.02168 6.75 6.75C6.75 10.4783 9.77168 13.5 13.5 13.5ZM18.225 15.1875H17.3443C16.1736 15.7254 14.8711 16.0312 13.5 16.0312C12.1289 16.0312 10.8316 15.7254 9.65566 15.1875H8.775C4.86211 15.1875 1.6875 18.3621 1.6875 22.275V24.4688C1.6875 25.8662 2.82129 27 4.21875 27H22.7812C24.1787 27 25.3125 25.8662 25.3125 24.4688V22.275C25.3125 18.3621 22.1379 15.1875 18.225 15.1875Z" fill="white"/>
             </svg>
-            <a>Личный кабинет</a>
+            <a href="{{ route('profile') }}">Личный кабинет</a>
+        </div>
+        <div class="nav-item" id="nav-item-exception2">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.25 16C8.25 15.5858 8.58578 15.25 9 15.25C9.41422 15.25 9.75 15.5858 9.75 16C9.75 16.4142 9.41422 16.75 9 16.75C8.58578 16.75 8.25 16.4142 8.25 16Z" fill="#0F0F0F" stroke="black" stroke-width="0.5"/>
+                <path d="M14.25 16C14.25 15.5858 14.5858 15.25 15 15.25C15.4142 15.25 15.75 15.5858 15.75 16C15.75 16.4142 15.4142 16.75 15 16.75C14.5858 16.75 14.25 16.4142 14.25 16Z" fill="#0F0F0F" stroke="black" stroke-width="0.5"/>
+                <path d="M11.25 4.73244V4.58824L11.1252 4.51604C10.6015 4.21308 10.25 3.64743 10.25 3C10.25 2.0335 11.0335 1.25 12 1.25C12.9665 1.25 13.75 2.0335 13.75 3C13.75 3.64743 13.3985 4.21308 12.8748 4.51604L12.75 4.58824V4.73244V7V7.25H13H18C19.5188 7.25 20.75 8.48122 20.75 10V20C20.75 21.5188 19.5188 22.75 18 22.75H6C4.48122 22.75 3.25 21.5188 3.25 20V10C3.25 8.48122 4.48122 7.25 6 7.25H11H11.25V7V4.73244ZM7.60558 8.8882L7.53648 8.75H7.38197H6C5.30965 8.75 4.75 9.30965 4.75 10V20C4.75 20.6904 5.30965 21.25 6 21.25H18C18.6904 21.25 19.25 20.6904 19.25 20V10C19.25 9.30965 18.6904 8.75 18 8.75H16.618H16.4635L16.3944 8.8882L14.9472 11.7826C14.6507 12.3755 14.0448 12.75 13.382 12.75H10.618C9.95519 12.75 9.34922 12.3755 9.05279 11.7826L8.82918 11.8944L9.05279 11.7826L7.60558 8.8882ZM13.382 11.25H13.5365L13.6056 11.1118L14.6056 9.1118L14.7865 8.75H14.382H9.61803H9.21353L9.39442 9.1118L10.3944 11.1118L10.4635 11.25H10.618H13.382Z" fill="#0F0F0F" stroke="black" stroke-width="0.5"/>
+                <path d="M0.25 15C0.25 14.5858 0.585784 14.25 1 14.25C1.41421 14.25 1.75 14.5858 1.75 15V17C1.75 17.4142 1.41421 17.75 1 17.75C0.585784 17.75 0.25 17.4142 0.25 17V15Z" fill="#0F0F0F" stroke="black" stroke-width="0.5"/>
+                <path d="M22.25 15C22.25 14.5858 22.5858 14.25 23 14.25C23.4142 14.25 23.75 14.5858 23.75 15V17C23.75 17.4142 23.4142 17.75 23 17.75C22.5858 17.75 22.25 17.4142 22.25 17V15Z" fill="#0F0F0F" stroke="black" stroke-width="0.5"/>
+            </svg>
+
+            <a>Консультант</a>
         </div>
     </nav>
     <div class="header-auth">
-        <a>Авторизоваться</a>
-        <img src="{{ asset('/images/auth-enter-icon.png') }}">
-        <img style="display: none;" src="{{ asset('/images/auth-quit-icon.png') }}">
+        <a href="{{ route('authorization') }}">Авторизоваться</a>
+        <img src="{{ asset('/images/header/auth-enter-icon.png') }}">
+        <img style="display: none;" src="img/auth-quit-icon.png">
     </div>
 </header>
-
-<style>
-    *, *:before, *:after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-
-    }
-
-    /* Header -- begin */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        height: 80px;
-        background-color: #858AD4;
-        padding: 0px 48px;
-        font-family: 'Roboto';
-    }
-
-    /* header logo */
-    .header-logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .header-logo img {
-        height: 45px;
-        width: 45px;
-    }
-
-    .header-logo p {
-        margin-left: 24px;
-        font-weight: bold;
-        color: white;
-        font-size: 20px;
-    }
-
-    /* header auth */
-    .header-auth {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    .header-auth img {
-        height: 32px;
-        width: 32px;
-    }
-
-    .header-auth a {
-        margin-right: 24px;
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-    }
-
-    /* header nav */
-    .header-nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 20px;
-    }
-
-    .header-nav svg path {
-        stroke: #fff;
-    }
-
-    .nav-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 40px;
-        margin-left: 30px;
-        font-weight: bold;
-        padding-left: 22px;
-        padding-right: 25px;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-    }
-
-    .nav-item:first-child {
-        margin-left: 0px;
-    }
-
-    .nav-item a {
-        margin-left: 10px;
-    }
-
-    .nav-item.active {
-        background-color: white;
-        border-radius: 25px;
-        color: #858AD4;
-    }
-
-    .nav-item.active svg path {
-        stroke: #858AD4;
-    }
-
-    #nav-item-exception.active svg path {
-        fill: #858AD4;
-    }
-    /* Header -- end */
-</style>

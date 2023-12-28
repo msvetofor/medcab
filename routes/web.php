@@ -2,12 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/logout', [App\Http\Controllers\AuthorizationController::class, 'destroy'])->middleware('auth')->name('logout');
-Route::get('/', [App\Http\Controllers\AuthorizationController::class, 'authorization'])->middleware('guest')->name('authorization');
-Route::post('/', [App\Http\Controllers\AuthorizationController::class, 'store'])->middleware('guest');
+//Route::get('/logout', [App\Http\Controllers\AuthorizationController::class, 'destroy'])->middleware('auth')->name('logout');
+//Route::post('/', [App\Http\Controllers\AuthorizationController::class, 'store'])->middleware('guest');
 
-Route::get('/reg', [App\Http\Controllers\RegistrationController::class, 'registration'])->middleware('guest')->name('registration');
-Route::post('/reg', [App\Http\Controllers\RegistrationController::class, 'store'])->middleware('guest');
 
 Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'main'])->middleware('auth')->name('profile');
 Route::get('/profile/settings', [\App\Http\Controllers\ProfileController::class, 'getSettings'])->middleware('auth')->name('settings');
@@ -41,3 +38,14 @@ Route::post('/diseases/create', [\App\Http\Controllers\DiseaseController::class,
 Route::get('/consultation', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('consultation');
 Route::get('/recommendations', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('recommendations');
 
+//Главная
+Route::get('/', [App\Http\Controllers\MainController::class, 'main'])->name('main');
+//Запись
+Route::get('/appointment', [App\Http\Controllers\AppointmentController::class, 'appointment'])->name('appointment');
+//Авторизация
+Route::get('/authorization', [App\Http\Controllers\AuthorizationController::class, 'authorization'])->middleware('guest')->name('authorization');
+//Регистрация
+Route::get('/registration', [App\Http\Controllers\RegistrationController::class, 'registration'])->middleware('guest')->name('registration');
+Route::post('/registration', [App\Http\Controllers\RegistrationController::class, 'store'])->middleware('guest');
+//Личный кабинет
+Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'main'])->middleware('auth')->name('profile');

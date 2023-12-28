@@ -12,8 +12,8 @@ class AppointmentRepository
     {
         return Specialization::query()->orderBy('created_at', 'DESC')->get();
     }
-    public function getDoctors($userSpecialization): Collection{
-        return User::query()->where('specialization', '=', $userSpecialization)->orderBy('created_at', 'DESC')->get();
+    public function getDoctors(): Collection{
+        return User::query()->where('role', '=', 'Врач')->orderBy('created_at', 'DESC')->get();
     }
     public function getDoctor($DoctorId): Collection{
         return User::query()->where('id', '=', $DoctorId)->get();

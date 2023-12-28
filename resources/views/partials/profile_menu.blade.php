@@ -37,7 +37,7 @@
                 </div>
             </div>
         </a>
-        <a href="{{ route('consultations') }}">
+        <a href="{{ route('consultation') }}">
             <div class="profile_menu_item">
                 <div class="profile_line">
                     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none">
