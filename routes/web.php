@@ -2,8 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/logout', [App\Http\Controllers\AuthorizationController::class, 'destroy'])->middleware('auth')->name('logout');
+Route::post('/', [App\Http\Controllers\AuthorizationController::class, 'store'])->middleware('guest');
+
+
+Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'main'])->middleware('auth')->name('profile');
 Route::get('/profile/settings', [\App\Http\Controllers\ProfileController::class, 'getSettings'])->middleware('auth')->name('settings');
 Route::post('/profile/settings', [\App\Http\Controllers\ProfileController::class, 'updateSettings'])->middleware('auth');
+Route::get('/profile/notifications', [\App\Http\Controllers\ProfileController::class, 'getNotifications'])->middleware('auth')->name('notifications');
+Route::get('/profile/recomendations', [\App\Http\Controllers\ProfileController::class, 'getRecomendations'])->middleware('auth')->name('recomendations');
 
 Route::get('/appointmspecialist', [App\Http\Controllers\AppointmentSpecializationController::class, 'appointmspecialist'])->name('appointmspecialist');
 Route::get('/appointmentdoctor/{userSpecialization}', [ App\Http\Controllers\AppointmentDoctorController::class, 'appointmentdoctor'])->name('appointmentdoctor');
@@ -30,23 +37,19 @@ Route::get('/diseases', [\App\Http\Controllers\DiseaseController::class, 'diseas
 Route::get('/diseases/create', [\App\Http\Controllers\DiseaseController::class, 'get_form'])->middleware('auth')->name('create_disease');
 Route::post('/diseases/create', [\App\Http\Controllers\DiseaseController::class, 'create'])->middleware('auth');
 
+Route::get('/consultation', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('consultation');
 Route::get('/recommendations', [\App\Http\Controllers\DiseaseController::class, 'diseases'])->middleware('auth')->name('recommendations');
 
 //Главная
 Route::get('/', [App\Http\Controllers\MainController::class, 'main'])->name('main');
 //Запись
-Route::get('/appointment', [App\Http\Controllers\AppointmentController::class, 'appointment'])->middleware('auth')->name('appointment');
-Route::post('/appointment/create', [App\Http\Controllers\AppointmentController::class, 'create'])->middleware('auth')->name('appointment_create');
+Route::get('/appointment', [App\Http\Controllers\AppointmentController::class, 'appointment'])->name('appointment');
+//чат ГПТ
+Route::get('/consultant', [App\Http\Controllers\ConsultantController::class, 'consultant'])->name('consultant');
 //Авторизация
 Route::get('/authorization', [App\Http\Controllers\AuthorizationController::class, 'authorization'])->middleware('guest')->name('authorization');
-Route::post('/authorization', [App\Http\Controllers\AuthorizationController::class, 'store'])->middleware('guest');
 //Регистрация
 Route::get('/registration', [App\Http\Controllers\RegistrationController::class, 'registration'])->middleware('guest')->name('registration');
 Route::post('/registration', [App\Http\Controllers\RegistrationController::class, 'store'])->middleware('guest');
 //Личный кабинет
 Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'main'])->middleware('auth')->name('profile');
-//Выход из личного кабинета
-Route::get('/logout', [App\Http\Controllers\AuthorizationController::class, 'destroy'])->middleware('auth')->name('logout');
-Route::post('/', [App\Http\Controllers\AuthorizationController::class, 'store'])->middleware('guest');
-//Консультация
-Route::get('/consultations', [\App\Http\Controllers\ConsultationController::class, 'consultations'])->name('consultations');

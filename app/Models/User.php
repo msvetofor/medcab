@@ -31,10 +31,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(Certificate::class);
     }
-    public function appointments(): HasMany
-    {
-        return $this->hasMany(Appointment::class);
-    }
     public function injections(): HasMany
     {
         return $this->hasMany(Injection::class);
