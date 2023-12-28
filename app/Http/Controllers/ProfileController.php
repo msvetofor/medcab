@@ -25,6 +25,24 @@ class ProfileController extends Controller
         ]);
     }
 
+    public function getNotifications()
+    {
+        $user = auth()->user();
+
+        return view('partials.notifications', [
+            'user' => $user,
+        ]);
+    }
+
+    public function getRecomendations()
+    {
+        $user = auth()->user();
+
+        return view('partials.recomendations', [
+            'user' => $user,
+        ]);
+    }
+
     public function updateSettings(Request $request)
     {
         $emailRule = 'required|string|min:3|max:64';

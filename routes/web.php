@@ -2,13 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-//Route::get('/logout', [App\Http\Controllers\AuthorizationController::class, 'destroy'])->middleware('auth')->name('logout');
-//Route::post('/', [App\Http\Controllers\AuthorizationController::class, 'store'])->middleware('guest');
+Route::get('/logout', [App\Http\Controllers\AuthorizationController::class, 'destroy'])->middleware('auth')->name('logout');
+Route::post('/', [App\Http\Controllers\AuthorizationController::class, 'store'])->middleware('guest');
 
 
 Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'main'])->middleware('auth')->name('profile');
 Route::get('/profile/settings', [\App\Http\Controllers\ProfileController::class, 'getSettings'])->middleware('auth')->name('settings');
 Route::post('/profile/settings', [\App\Http\Controllers\ProfileController::class, 'updateSettings'])->middleware('auth');
+Route::get('/profile/notifications', [\App\Http\Controllers\ProfileController::class, 'getNotifications'])->middleware('auth')->name('notifications');
+Route::get('/profile/recomendations', [\App\Http\Controllers\ProfileController::class, 'getRecomendations'])->middleware('auth')->name('recomendations');
 
 Route::get('/appointmspecialist', [App\Http\Controllers\AppointmentSpecializationController::class, 'appointmspecialist'])->name('appointmspecialist');
 Route::get('/appointmentdoctor/{userSpecialization}', [ App\Http\Controllers\AppointmentDoctorController::class, 'appointmentdoctor'])->name('appointmentdoctor');
