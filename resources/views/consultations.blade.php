@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="{{ asset('/css/profile.css') }}">
 @endsection
 
+@section('header')
+    @include('partials.header')
+@endsection
+
 @section('sidebar')
     @include('partials.sidebar')
 @endsection
@@ -93,7 +97,7 @@
                 font-size: 24px;
                 font-family: Roboto;
                 text-align: center;
-                background: #626DFF;
+                background: #858AD4;
                 border: none;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 display: flex;
@@ -241,7 +245,7 @@
                 overflow: hidden;
             }
             .consultations_menu{
-                background: #626DFF;
+                background: #858AD4;
                 max-width: 400px;
                 width: 100%;
                 height: 100%;

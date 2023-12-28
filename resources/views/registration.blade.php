@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 @endsection
 
+@section('header')
+    @include('partials.header')
+@endsection
+
 @section('content')
     <div class="form_container">
         <form class="form" action="{{ route('registration') }}" method="POST" autocomplete="off">

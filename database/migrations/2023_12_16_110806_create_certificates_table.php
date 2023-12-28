@@ -17,6 +17,8 @@ return new class extends Migration
             $table->text('description');
             $table->date('started_at');
             $table->foreignIdFor(User::class);
+            $table->boolean('archived')->default(false);
+            $table->boolean('confirmed')->default(false);
             $table->timestamps();
         });
     }
