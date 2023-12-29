@@ -11,7 +11,6 @@ body {
 	align-items: center;
 }
 
-/* message-box -- begin */
 .message-box {
 	display: flex;
 	flex-direction: column;
@@ -140,6 +139,65 @@ body {
 	margin-right: auto;
 }
 
+.message.from-bot.bot-thinking {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 25px;
+	padding-right: 35px;
+	padding-left: 35px;
+}
+
+.dot-flashing {
+	position: relative;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: black;
+	color: black;
+	animation: dot-flashing 1s infinite linear alternate;
+	animation-delay: 0.5s;
+}
+
+.dot-flashing::before, .dot-flashing::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 0;
+}
+
+.dot-flashing::before {
+	left: -15px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: black;
+	color: black;
+	animation: dot-flashing 1s infinite alternate;
+	animation-delay: 0s;
+}
+
+.dot-flashing::after {
+	left: 15px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: black;
+	color: black;
+	animation: dot-flashing 1s infinite alternate;
+	animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+	0% {
+		background-color: black;
+	}
+
+	50%, 100% {
+		background-color: #ccc;
+	}
+}
+
 .message-box-content form {
 	border: 5px solid #858AD4;
 	border-radius: 25px;
@@ -187,4 +245,3 @@ body {
 	transform: translate(-200px, 100px);
 	width: 400px;
 }
-/* message-box -- end */
