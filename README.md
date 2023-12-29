@@ -19,5 +19,5 @@
 <img src="https://sun9-78.userapi.com/impf/rgRDppQ_nLtpDrHxLcekqYM5tQllYK17kwdB4g/OG2Xm6z0utw.jpg?size=2049x1151&quality=96&sign=8961396564070f639396117c1bc02767&type=album">
 <p><i>Видео консультация (В РАЗРАБОТКЕ)</i></p><br>
 <p>Наш проект должен победить, потому что он предоставляет удобную и безопасную платформу для управления медицинскими данными и улучшения качества медицинского ухода.</p>
-<img src="https://media.discordapp.net/attachments/941368287835586590/1189989467872833708/afe8d865-682e-481d-9b93-e301659b1aa5.png?ex=65a02b0e&is=658db60e&hm=014b05a6404e03d1c9cf01abf6403f6790695fa8f0eff81d18c8d9857e2e3330&=&format=webp&quality=lossless&width=485&height=593">
+<img src="https://media.discordapp.net/attachments/941368287835586590/1190273523650920589/ac1d51f5-3c3d-42f9-923e-0ef78fee4041.png?ex=65a1339a&is=658ebe9a&hm=5d2b99fdd86c50e89f459aa77322d9470e84b7b8ddc7b5c3c41eea067883595c&=&format=webp&quality=lossless&width=949&height=593">
 <p><i>Голосуйте за нас - <b>БУДУЩЕЕ ЗА НАМИ</b></i></p>
