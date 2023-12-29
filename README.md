@@ -21,3 +21,4 @@
 <p>Наш проект должен победить, потому что он предоставляет удобную и безопасную платформу для управления медицинскими данными и улучшения качества медицинского ухода.</p>
 <img src="https://media.discordapp.net/attachments/941368287835586590/1190273523650920589/ac1d51f5-3c3d-42f9-923e-0ef78fee4041.png?ex=65a1339a&is=658ebe9a&hm=5d2b99fdd86c50e89f459aa77322d9470e84b7b8ddc7b5c3c41eea067883595c&=&format=webp&quality=lossless&width=949&height=593">
 <p><i>Голосуйте за нас - <b>БУДУЩЕЕ ЗА НАМИ</b></i></p>
+<a href="https://www.figma.com/file/NfEzPZ6iw2mR1edqIFrgg4/Untitled?type=design&node-id=14%3A1294&mode=design&t=i0NKkoZ06SGsX2Xo-1">Ссылка на фигму</a>
