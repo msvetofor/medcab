@@ -50,3 +50,13 @@ Route::get('/logout', [App\Http\Controllers\AuthorizationController::class, 'des
 Route::post('/', [App\Http\Controllers\AuthorizationController::class, 'store'])->middleware('guest');
 //Консультация
 Route::get('/consultations', [\App\Http\Controllers\ConsultationController::class, 'consultations'])->name('consultations');
+//Консультация  ЧАТ
+Route::get('consultations/chat/{appointmentId}', [\App\Http\Controllers\ChatController::class, 'chat'])->name('chat');
+Route::post('consultations/chat/update', [\App\Http\Controllers\ChatController::class, 'chat_update'])->name('chat_update');
+//Консультация ВРАЧ
+Route::get('/appointmentlist', [\App\Http\Controllers\ConsultationController::class, 'appointmentlist'])->name('appointmentlist');
+//чат ГПТ
+Route::get('/consultant', [App\Http\Controllers\ConsultantController::class, 'consultant'])->name('consultant');
+//ЧеТо
+Route::get('/profile/notifications', [\App\Http\Controllers\ProfileController::class, 'getNotifications'])->middleware('auth')->name('notifications');
+Route::get('/profile/recomendations', [\App\Http\Controllers\ProfileController::class, 'getRecomendations'])->middleware('auth')->name('recomendations');

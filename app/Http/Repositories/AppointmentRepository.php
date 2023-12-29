@@ -2,6 +2,7 @@
 
 namespace App\Http\Repositories;
 
+use App\Models\Appointment;
 use App\Models\Specialization;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Collection;
@@ -17,5 +18,14 @@ class AppointmentRepository
     }
     public function getDoctor($DoctorId): Collection{
         return User::query()->where('id', '=', $DoctorId)->get();
+    }
+    public function getAppointmentsBusy(): Collection{
+        return Appointment::query()->where('status', '=', 'busy')->get();
+    }
+    public function getAppointmentsOpen(): Collection{
+        return Appointment::query()->where('status', '=', 'open')->get();
+    }
+    public function getChat($appointmentId): Collection{
+        return Appointment::query()->where('id', '=', $appointmentId)->get();
     }
 }

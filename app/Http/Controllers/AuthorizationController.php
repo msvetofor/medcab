@@ -35,7 +35,6 @@ class AuthorizationController extends Controller
     public function destroy(Request $request)
     {
         Auth::logout();
-
         return redirect()->route('authorization');
     }
 }

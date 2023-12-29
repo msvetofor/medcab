@@ -13,6 +13,6 @@ class Appointment extends Model
         'status',
         'chat',
         'trouble',
-        'connection',
+        'connection'
     ];
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -10,7 +11,6 @@ class ProfileController extends Controller
 {
     public function main() {
         $user = auth()->user();
-
         return view('partials.profile_menu', [
             'user' => $user,
         ]);

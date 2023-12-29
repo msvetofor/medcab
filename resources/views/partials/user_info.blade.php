@@ -5,6 +5,7 @@
     <div class="user_info">
         <div class="user_name">
             {{ $user->name }}
+            <div></div>
         </div>
         <div class="user_data">
 {{--            @php--}}
