@@ -37,7 +37,7 @@ class AppointmentController extends Controller
             'status' => 'busy',
         ]);
 
-        return redirect()->route('consultations')->with('message', 'Заявка успешно отправлена!');
+        return redirect()->route('appointment')->with('message', 'Заявка успешно отправлена!');
     }
 
 }
